@@ -1,0 +1,17 @@
+# This is a config for E2B sandbox template.
+# You can use template ID (ljxaoi1x4m1hpnqxbfwv) or template name (launchpad-test) to create a sandbox:
+
+# Python SDK
+# from e2b import Sandbox, AsyncSandbox
+# sandbox = Sandbox("launchpad-test") # Sync sandbox
+# sandbox = await AsyncSandbox.create("launchpad-test") # Async sandbox
+
+# JS SDK
+# import { Sandbox } from 'e2b'
+# const sandbox = await Sandbox.create('launchpad-test')
+
+team_id = "6fba0302-0bdf-4b99-885a-bd4b6e7d0b84"
+start_cmd = "/compile_page.sh"
+dockerfile = "e2b.Dockerfile"
+template_name = "launchpad-test"
+template_id = "ljxaoi1x4m1hpnqxbfwv"

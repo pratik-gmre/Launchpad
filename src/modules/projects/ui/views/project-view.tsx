@@ -6,18 +6,17 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
 
-
 import { Suspense, useState } from "react";
 import { MessagesContainer } from "../components/message-container";
 import { Fragment } from "@/generated/prisma";
 import { ProjectHeader } from "../components/project-header";
+import { FragmentWeb } from "../components/fragment-web";
 
 interface Props {
   projectId: string;
 }
 export const ProjectView = ({ projectId }: Props) => {
-
-  const  [activeFragment , setActiveFragment] = useState<Fragment | null>(null)
+  const [activeFragment, setActiveFragment] = useState<Fragment | null>(null);
 
   return (
     <div className="h-screen">
@@ -28,10 +27,14 @@ export const ProjectView = ({ projectId }: Props) => {
           className="flex flex-col min-h-0"
         >
           <Suspense fallback={<div>Loading...</div>}>
-            <ProjectHeader projectId={projectId}/>
+            <ProjectHeader projectId={projectId} />
           </Suspense>
           <Suspense fallback={<div>Loading...</div>}>
-            <MessagesContainer projectId={projectId} activeFragment={activeFragment} setActiveFragment={setActiveFragment} />
+            <MessagesContainer
+              projectId={projectId}
+              activeFragment={activeFragment}
+              setActiveFragment={setActiveFragment}
+            />
           </Suspense>
         </ResizablePanel>
         <ResizableHandle withHandle />
@@ -40,7 +43,7 @@ export const ProjectView = ({ projectId }: Props) => {
           minSize={50}
           className="flex flex-col min-h-0"
         >
-          todo :preview
+          {!!activeFragment && <FragmentWeb  data={activeFragment}/>}
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>

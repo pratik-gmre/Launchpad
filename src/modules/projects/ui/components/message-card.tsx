@@ -78,7 +78,7 @@ const AssistantMessage = ({
     >
       <div className="flex items-center gap-2 pl-2 mb-2">
         <Image
-          src={"/launchpad.png"}
+          src={"/logo-short.svg"}
           alt="launchpad"
           width={18}
           className="shrink-0"

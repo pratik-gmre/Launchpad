@@ -1,8 +1,8 @@
-# Vibe - AI-Powered SaaS Website Builder
+# Launchpad - AI-Powered SaaS Website Builder
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Vibe is an AI-powered SaaS app builder that lets you generate full-stack Next.js applications from simple prompts using programmable AI agents. The project features live previews, AI-driven code generation, authentication, billing, and a modern developer toolchain.
+Launchpad is an AI-powered SaaS app builder that lets you generate full-stack Next.js applications from simple prompts using programmable AI agents. The project features live previews, AI-driven code generation, authentication, billing, and a modern developer toolchain.
 
 ---
 
@@ -69,7 +69,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Additional Resources
 
-For more details on how Vibe is built, including the AI agent architecture, background job system, and usage instructions, refer to the full video tutorial and source code:
+For more details on how Launchpad is built, including the AI agent architecture, background job system, and usage instructions, refer to the full video tutorial and source code:
 
 - [Build and Deploy a SaaS AI Website Builder | Next.js 15, React, Inngest, Prisma | Lovable clone](https://www.youtube.com/watch?v=xs8mWnbMcmc)
-- Source Code & Assets: https://cwa.run/vibe
+- Source Code & Assets: https://cwa.run/Launchpad

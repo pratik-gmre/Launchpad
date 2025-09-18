@@ -15,9 +15,10 @@ import { FragmentWeb } from "../components/fragment-web";
 import { CodeIcon, CrownIcon, EyeIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { CodeView } from "@/components/code-view";
+
 import { FileExplorer } from "@/components/file-explorer";
 import { UserControl } from "@/components/user-control";
+import { ErrorBoundary } from "react-error-boundary"
 
 interface Props {
   projectId: string;
@@ -35,9 +36,14 @@ export const ProjectView = ({ projectId }: Props) => {
           minSize={20}
           className="flex flex-col min-h-0"
         >
+          <ErrorBoundary fallback={<p>Something went wrong</p>}>
+
           <Suspense fallback={<div>Loading...</div>}>
             <ProjectHeader projectId={projectId} />
           </Suspense>
+          </ErrorBoundary>
+          <ErrorBoundary fallback={<p>Something went wrong</p>}>
+
           <Suspense fallback={<div>Loading...</div>}>
             <MessagesContainer
               projectId={projectId}
@@ -45,6 +51,7 @@ export const ProjectView = ({ projectId }: Props) => {
               setActiveFragment={setActiveFragment}
             />
           </Suspense>
+          </ErrorBoundary>
         </ResizablePanel>
         <ResizableHandle className="hover:bg-primary transition-colors" />
         <ResizablePanel

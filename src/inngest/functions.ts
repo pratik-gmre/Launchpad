@@ -28,6 +28,7 @@ export const Launchpad = inngest.createFunction(
     }
     const sandboxId = await step.run("get-sandbox-id", async () => {
       const sandbox = await Sandbox.create("launchpad-test");
+      // await sandbox.setTimeout(3_600_000);
       return sandbox.sandboxId;
     });
 
@@ -40,8 +41,9 @@ export const Launchpad = inngest.createFunction(
             projectId: event.data.projectId,
           },
           orderBy: {
-            createdAt: "desc",
+            createdAt: "asc",
           },
+          take:5
         });
 
         for (const message of messages) {
@@ -53,7 +55,7 @@ export const Launchpad = inngest.createFunction(
           });
         }
 
-        return formattedMessages;
+        return formattedMessages.reverse()
       }
     );
 

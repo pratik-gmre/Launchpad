@@ -103,8 +103,8 @@ export const Launchpad = inngest.createFunction(
                 });
                 return result.stdout;
               } catch (error) {
-                console.log();
-                `Command failed: ${error} \nstdout: ${buffers.stdout} \nstderr: ${buffers.stderr}`;
+                console.log(
+                `Command failed: ${error} \nstdout: ${buffers.stdout} \nstderr: ${buffers.stderr}`)
                 return `Command failed: ${error} \nstdout: ${buffers.stdout} \nstderr: ${buffers.stderr}`;
               }
             });
@@ -162,7 +162,9 @@ export const Launchpad = inngest.createFunction(
                   contents.push({ path: file, content });
                 }
                 return JSON.stringify(contents);
-              } catch (error) {}
+              } catch (error) {
+                return "Error: " + error;
+              }
             });
           },
         }),

@@ -3,27 +3,21 @@ import { TreeItem } from "@/types";
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
+
   SidebarGroup,
-  SidebarGroupAction,
+
   SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarHeader,
-  SidebarInput,
-  SidebarInset,
+ 
   SidebarMenu,
-  SidebarMenuAction,
-  SidebarMenuBadge,
+
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSkeleton,
+
   SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
+  
   SidebarProvider,
   SidebarRail,
-  SidebarSeparator,
-  SidebarTrigger,
+ 
 } from "@/components/ui/sidebar";
 import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react";
 import {
@@ -73,55 +67,6 @@ interface TreeNodeProps {
   onSelect?: (value: string) => void;
   parentPath: string;
 }
-// const Tree = ({ item, selectedValue, onSelect, parentPath }: TreeNodeProps) => {
-//   const [name, ...items] = Array.isArray(item) ? item : [item];
-//   const currentPath = parentPath ? `${parentPath}/${name}` : name;
-//   if (!item.length) {
-//     const isSelected = selectedValue === currentPath;
-//     return (
-//       <SidebarMenuButton
-//         isActive={isSelected}
-//         className="data-[active=true]:bg-transparent"
-//         onClick={() => {
-//           onSelect?.(currentPath);
-//         }}
-//       >
-//         <FileIcon />
-//         <span className="truncate">{name}</span>
-//       </SidebarMenuButton>
-//     );
-//   }
-
-//   return (
-//     <SidebarMenuItem>
-//       <Collapsible
-//         className="group/collapsible [&[data-state=open]>button>svg:first-child]:rotate-90"
-//         defaultOpen
-//       >
-//         <CollapsibleTrigger asChild>
-//           <SidebarMenuButton>
-//             <ChevronRightIcon className="transition-transform" />
-//             <FolderIcon />
-//             <span className="truncate">{name}</span>
-//           </SidebarMenuButton>
-//         </CollapsibleTrigger>
-//         <CollapsibleContent>
-//           <SidebarMenuSub>
-//             {items.map((item, index) => (
-//               <Tree
-//                 key={index}
-//                 item={item}
-//                 selectedValue={selectedValue}
-//                 onSelect={onSelect}
-//                 parentPath={currentPath}
-//               />
-//             ))}
-//           </SidebarMenuSub>
-//         </CollapsibleContent>
-//       </Collapsible>
-//     </SidebarMenuItem>
-//   );
-// };
 
 
 const Tree = ({ item, selectedValue, onSelect, parentPath }: TreeNodeProps) => {

@@ -13,7 +13,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { PROJECT_TEMPLATES } from "../../constant";
-import { truncateSync } from "fs";
+
 
 
 
@@ -132,11 +132,11 @@ export const ProjectForm = () => {
       </form>
 
       <div className="flex-wrap justify-center gap-2 hidden md:flex max-w-3xl">
-       {/* {PROJECT_TEMPLATES.map((template)=>(
+       {PROJECT_TEMPLATES.map((template)=>(
         <Button key={template.title} variant={"outline"} size={"sm"} className="bg-white dark:bg-sidebar" onClick={()=>onSelect(template.prompt)} >
           {template.emoji} {template.title}
         </Button>
-       ))} */}
+       ))}
       </div>
       </section>
     </Form>

@@ -66,9 +66,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ---
 
-## Additional Resources
 
-For more details on how Launchpad is built, including the AI agent architecture, background job system, and usage instructions, refer to the full video tutorial and source code:
-
-- [Build and Deploy a SaaS AI Website Builder | Next.js 15, React, Inngest, Prisma | Lovable clone](https://www.youtube.com/watch?v=xs8mWnbMcmc)
-- Source Code & Assets: https://cwa.run/Launchpad

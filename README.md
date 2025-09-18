@@ -36,15 +36,14 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 - Tailwind CSS v4 + Shadcn/ui for styling and component composition.
 - Full-stack type safety with tRPC.
 - Background job orchestration powered by Inngest.
-- AI agent toolkit supporting OpenAI, Anthropic, and Grok models.
+- AI agent toolkit supporting OpenAI.
 - Secure runtime execution with E2B cloud sandboxes and Docker.
 - Authentication and billing managed by Clerk.
 - Prisma + Neon for database integration.
-- AI-assisted PR code reviews with CodeRabbit.
 - Live project previews with shareable URLs.
-- Built-in credit system with usage tracking.
-- Dark mode support and theme customization.
-- Comprehensive Git workflow including branches and pull requests.
+
+
+
 
 ---
 
